@@ -60,9 +60,9 @@ class RewriteStrategy(bt.Strategy):
             self.f = open(self.p.outfile, 'wb')
 
         if self.data._timeframe < bt.TimeFrame.Days:
-            headers = 'Date,Time,Open,High,Low,Close,Volume,OpenInterest'
+            headers = 'Date,Time,Open,High,Low,Close,Hurst,Volatility,Residus,Volume,OpenInterest'
         else:
-            headers = 'Date,Open,High,Low,Close,Volume,OpenInterest'
+            headers = 'Date,Open,High,Low,Close,Hurst,Volatility,Residus,Volume,OpenInterest'
 
         headers += '\n'
         self.f.write(bytes(headers))

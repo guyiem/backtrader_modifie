@@ -145,7 +145,7 @@ class TestStrategy(bt.Strategy):
             self.datastatus += 1
 
     def start(self):
-        header = ['Datetime', 'Open', 'High', 'Low', 'Close', 'Volume',
+        header = ['Datetime', 'Open', 'High', 'Low', 'Close', "Hurst", "Volatility", " Residus", 'Volume',
                   'OpenInterest', 'SMA']
         print(', '.join(header))
 

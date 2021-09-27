@@ -52,10 +52,13 @@ class PandasDirectData(feed.DataBase):
         ('close', 4),
         ('volume', 5),
         ('openinterest', 6),
+        ('hurst', 5),
+        ('volatility', 6),
+        ('residus', 7),
     )
 
     datafields = [
-        'datetime', 'open', 'high', 'low', 'close', 'volume', 'openinterest'
+        'datetime', 'open', 'high', 'low', 'close', 'volume', 'openinterest', "hurst", "volatility", "residus"
     ]
 
     def start(self):
@@ -154,10 +157,14 @@ class PandasData(feed.DataBase):
         ('close', -1),
         ('volume', -1),
         ('openinterest', -1),
+        ("hurst",-1),
+        ("volatility",-1),
+        ("residus",-1),
+        
     )
 
     datafields = [
-        'datetime', 'open', 'high', 'low', 'close', 'volume', 'openinterest'
+        'datetime', 'open', 'high', 'low', 'close', 'volume', 'openinterest', "hurst", "volatility", "residus"
     ]
 
     def __init__(self):

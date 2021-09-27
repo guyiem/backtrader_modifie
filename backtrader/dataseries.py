@@ -64,9 +64,9 @@ class DataSeries(LineSeries):
     _compression = 1
     _timeframe = TimeFrame.Days
 
-    Close, Low, High, Open, Volume, OpenInterest, DateTime = range(7)
+    Close, Low, High, Open, Hurst, Volatility, Residus, Volume, OpenInterest, DateTime = range(10)
 
-    LineOrder = [DateTime, Open, High, Low, Close, Volume, OpenInterest]
+    LineOrder = [DateTime, Open, High, Low, Close, Hurst, Volatility, Residus, Volume, OpenInterest]
 
     def getwriterheaders(self):
         headers = [self._name, 'len']
@@ -105,7 +105,7 @@ class DataSeries(LineSeries):
 
 
 class OHLC(DataSeries):
-    lines = ('close', 'low', 'high', 'open', 'volume', 'openinterest',)
+    lines = ('close', 'low', 'high', 'open', "hurst", "volatility", "residus", 'volume', 'openinterest',)
 
 
 class OHLCDateTime(OHLC):

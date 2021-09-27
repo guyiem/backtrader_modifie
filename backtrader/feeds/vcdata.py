@@ -422,6 +422,9 @@ class VCData(with_metaclass(MetaVCData, DataBase)):
             self.lines.high[0] = bar.High
             self.lines.low[0] = bar.Low
             self.lines.close[0] = bar.Close
+            self.lines.hurst[0] = bar.Hurst
+            self.lines.volatility[0] = bar.Volatility
+            self.lines.residus[0] = bar.Residus
             self.lines.volume[0] = bar.Volume
             self.lines.openinterest[0] = bar.OpenInterest
 

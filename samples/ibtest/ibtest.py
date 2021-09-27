@@ -201,7 +201,7 @@ class TestStrategy(bt.Strategy):
             print('Timezone from ContractDetails: {}'.format(
                   self.data0.contractdetails.m_timeZoneId))
 
-        header = ['Datetime', 'Open', 'High', 'Low', 'Close', 'Volume',
+        header = ['Datetime', 'Open', 'High', 'Low', 'Close', "Hurst"," Volatility"," Residus", 'Volume',
                   'OpenInterest', 'SMA']
         print(', '.join(header))
 

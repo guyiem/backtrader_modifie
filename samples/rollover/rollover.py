@@ -33,7 +33,7 @@ import backtrader as bt
 class TheStrategy(bt.Strategy):
     def start(self):
         header = ['Len', 'Name', 'RollName', 'Datetime', 'WeekDay', 'Open',
-                  'High', 'Low', 'Close', 'Volume', 'OpenInterest']
+                  'High', 'Low', 'Close', "Hurst", "Volatility", " Residus", 'Volume', 'OpenInterest']
         print(', '.join(header))
 
     def next(self):

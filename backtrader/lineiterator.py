@@ -385,6 +385,9 @@ class DataAccessor(LineIterator):
     PriceLow = DataSeries.Low
     PriceHigh = DataSeries.High
     PriceOpen = DataSeries.Open
+    PriceHurst = DataSeries.Hurst
+    PriceVolatility = DataSeries.Volatility
+    PriceResidus = DataSeries.Residus
     PriceVolume = DataSeries.Volume
     PriceOpenInteres = DataSeries.OpenInterest
     PriceDateTime = DataSeries.DateTime
